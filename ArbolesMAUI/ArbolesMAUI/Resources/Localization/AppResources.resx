@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="FLOWERING-CULTURE-TITLE" xml:space="preserve">
+    <value>Flowering Culture</value>
+  </data>
+  <data name="IDENTIFY-TREE-NAME-TITLE" xml:space="preserve">
+    <value>Search tree by name</value>
+  </data>
+  <data name="IDENTIFY-TREE-SEARCHBAR-PLACEHOLER" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="IDENTIFY-TREE-REGION-TITLE" xml:space="preserve">
+    <value>Search tree by region</value>
+  </data>
+  <data name="TREE-DETAILS-TITLE" xml:space="preserve">
+    <value>Magical Trees</value>
+  </data>
+  <data name="BACK-BUTTON" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="CANCEL" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="SAVE" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="NEXT-BUTTON" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="BEGIN-EXPLORING" xml:space="preserve">
+    <value>Begin to explore</value>
+  </data>
+  <data name="FDS1" xml:space="preserve">
+    <value>Nature has a rhythm and a time, which is the present. To reconnect with it, it is essential to be here, focus our attention and channel our potential toward the present moment. 'To be here' means synchronizing ourselves with our surroundings.Observing trees in bloom is a way to synchronize our minds with the cycles of nature.</value>
+  </data>
+  <data name="FDS2" xml:space="preserve">
+    <value>In a world in which everything happens so quickly, enjoying moments of deceleration helps us to process the stimuli to which we are exposed, validate our path toward a higher purpose, and refresh ourselves spiritually. Slowing down allows us to be present.</value>
+  </data>
+  <data name="FDS3" xml:space="preserve">
+    <value>Colors stand out in a green forest or urban landscape. They give personality to each tree, attract our attention, and fine-tune our perception both of nature and of ourselves.</value>
+  </data>
+  <data name="FDS4" xml:space="preserve">
+    <value>The phenomenon of synchronized or mass blooming is a survival mechanism for trees. By blooming at the same time, they ensure that pollinators will focus on them, thus safeguarding the continuity of their species.Some species with this characteristic include cortez amarillo, cortez negro, gallinazo, mayo, poró gigante.</value>
+  </data>
+  <data name="FDS5" xml:space="preserve">
+    <value>Communities of practice so passionate in blooming trees. When they see the colors their attention is tuned. People connected to the forest.</value>
+  </data>
+  <data name="TOUCH-TUTORIAL-COLORS" xml:space="preserve">
+    <value>Identify the species of a tree by selecting the color of its flowers</value>
+  </data>
+  <data name="TREE-DETAILS-FORM-ORIGIN" xml:space="preserve">
+    <value>Tree origin:</value>
+  </data>
+  <data name="TREE-DETAILS-FORM-MONTHS" xml:space="preserve">
+    <value>Flowering months:</value>
+  </data>
+  <data name="TREE-DETAILS-FORM-DAYS" xml:space="preserve">
+    <value>Flowering Days: </value>
+  </data>
+  <data name="TREE-DETAILS-FORM-DIMENSIONS" xml:space="preserve">
+    <value>Flower dimensions:</value>
+  </data>
+  <data name="TREE-DETAILS-FORM-HEIGTH" xml:space="preserve">
+    <value>Height:</value>
+  </data>
+  <data name="TREE-DETAILS-FORM-WIDTH" xml:space="preserve">
+    <value>Width:</value>
+  </data>
+  <data name="TREE-DETAILS-FORM-DEPTH" xml:space="preserve">
+    <value>Depth:</value>
+  </data>
+  <data name="TREE-DETAILS-FORM-AVERAGE" xml:space="preserve">
+    <value>Average tree height:</value>
+  </data>
+  <data name="TREE-DETAILS-FORM-DISPERSER" xml:space="preserve">
+    <value>Main seed disperser:</value>
+  </data>
+  <data name="TREE-DETAILS-FORM-REGION" xml:space="preserve">
+    <value>Region:</value>
+  </data>
+  <data name="TREE-DETAILS-FORM-SPONSOR" xml:space="preserve">
+    <value>This tree is presented by: </value>
+  </data>
+  <data name="TUTORIAL-TITLE1" xml:space="preserve">
+    <value>Ojeadores</value>
+  </data>
+  <data name="TUTORIAL-TITLE2" xml:space="preserve">
+    <value>Reconnection</value>
+  </data>
+  <data name="TUTORIAL-TITLE3" xml:space="preserve">
+    <value>Magic Trees</value>
+  </data>
+  <data name="TUTORIAL-DESCRIPTION1" xml:space="preserve">
+    <value>Explore and learn about different tree species by the color of their flowers.</value>
+  </data>
+  <data name="TUTORIAL-DESCRIPTION2" xml:space="preserve">
+    <value>Ojeadores is a Magical Trees Foundation initiative, an organization that seeks to be a bridge of re connection between people and nature.</value>
+  </data>
+  <data name="TUTORIAL-DESCRIPTION3" xml:space="preserve">
+    <value>The Foundation has brought its educational programs to more than 5,000 children and youth, and has planted more than 25,000 trees.</value>
+  </data>
+  <data name="ABOUT-MAGICAL-TREES-TOP" xml:space="preserve">
+    <value>Magical Trees is a movement that celebrate the flowering trees like a bridge of regeneration of social and collective wellness.
+
+Our invitation: The Pause gives us a space to be present, from there we can choose more clearly. By contemplating we restore our attention. When we connect we approach the internal, thus we enhance the collective. And by creating materialize dreams. Head, heart and hands.</value>
+  </data>
+  <data name="ABOUT-MAGICAL-TREES-BOTTOM" xml:space="preserve">
+    <value>An organization that combines head and heart to strengthen concrete actions towards a resilient, prosperous and inclusive planet based on regeneration.
+
+Read about our impacts aligned with the Sustainable Development Goals. www.arbolesmagicos.org.
+
+The colors of tree flowers arouse curiosity allowing learning from their beauty (positive bio-literacy), this App seeks to generate a community that shares and maps those iconic trees to celebrate, enjoy and enjoy them. chase its flowering peak every year. #FlorationReport #ColorMap #ArborealNet</value>
+  </data>
+  <data name="ABOUT-MAGICAL-TREES-INTRO" xml:space="preserve">
+    <value>Magical Trees is a movement that celebrate the flowering trees like a bridge of regeneration of social and collective wellness.</value>
+  </data>
+  <data name="ABOUT-WHAT-IS" xml:space="preserve">
+    <value>What is Magical Trees?</value>
+  </data>
+  <data name="ABOUT-TITLE" xml:space="preserve">
+    <value>Magical Trees</value>
+  </data>
+  <data name="ABOUT-ALLIANCE" xml:space="preserve">
+    <value>In alliance with:</value>
+  </data>
+  <data name="SUPPORT-OF" xml:space="preserve">
+    <value>With the Support of: </value>
+  </data>
+  <data name="TREE-REPORT-PHOTO-SELECT" xml:space="preserve">
+    <value>Select a Photo</value>
+  </data>
+  <data name="TREE-REPORT-TREE-SELECT" xml:space="preserve">
+    <value>Select the kind of tree</value>
+  </data>
+  <data name="TREE-REPORT-USER-COORDINATES" xml:space="preserve">
+    <value>Use photo's Coordinates</value>
+  </data>
+  <data name="TREE-REPORT-USER-MAPS" xml:space="preserve">
+    <value>Use Maps</value>
+  </data>
+  <data name="TREE-REPORT-FIND-TREE-TITLE" xml:space="preserve">
+    <value>What tree is it?</value>
+  </data>
+  <data name="TREE-REPORT-FIND-TREE-MESSAGE" xml:space="preserve">
+    <value>If you didn't find the tree in the list, you can write the name manually.</value>
+  </data>
+  <data name="TREE-REPORT-FIND-TREE-WRITE-NAME" xml:space="preserve">
+    <value>Write the name</value>
+  </data>
+  <data name="TREE-REPORT-FIND-TREE-SEARCH-NAME" xml:space="preserve">
+    <value>Search by tree name</value>
+  </data>
+  <data name="TREE-REPORT-WRITE-NAME-TREE" xml:space="preserve">
+    <value>What's the name of the tree?</value>
+  </data>
+  <data name="TREE-REPORT-WRITE-NAME-TREE-PLACEHOLDER" xml:space="preserve">
+    <value>Identify the Tree</value>
+  </data>
+  <data name="TREE-REPORT-MAP-NAVIGATION-CONTROLLER-TITLE" xml:space="preserve">
+    <value>Where did you take the picture?</value>
+  </data>
+  <data name="TREE-REPORT-ERROR-MESSAGE-SEARCH-TREE" xml:space="preserve">
+    <value>Please select one tree</value>
+  </data>
+  <data name="TREE-REPORT-ERROR-UPLOAD" xml:space="preserve">
+    <value>Please provide all the information for the report</value>
+  </data>
+  <data name="TREE-REPORT-UPLOAD-SUCCESSFULY" xml:space="preserve">
+    <value>Your report was uploaded successfuly!
+Once approved, you'll see it in the App!</value>
+  </data>
+  <data name="TREE-REPORT-SELECT-COLOR" xml:space="preserve">
+    <value>Tree's flowering color?</value>
+  </data>
+  <data name="TREE-FEED-MAPS-ERROR" xml:space="preserve">
+    <value>Google Maps is necessary for getting the directions</value>
+  </data>
+  <data name="TREE-FEED-MAPS-ACTIONSHEET-TITLE" xml:space="preserve">
+    <value>Supported apps to get the direction</value>
+  </data>
+  <data name="LOGIN-MAIL-PLACEHOLDER" xml:space="preserve">
+    <value>Mail</value>
+  </data>
+  <data name="LOGIN-PASSWORD-PLACEHOLDER" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="LOGIN-NAME-PLACEHOLDER" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="LOGIN-BUTTON" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="LOGIN-ERROR-USER-NOT-FOUND" xml:space="preserve">
+    <value>Sorry, This user does not exists</value>
+  </data>
+  <data name="SEX-MALE" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="SEX-FEMALE" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="SEX-OTHER" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="REGISTER-BUTTON" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="REGISTER-ERROR-EMAIL-USED" xml:space="preserve">
+    <value>Sorry but this email is already used</value>
+  </data>
+  <data name="REGISTER-ERROR-INVALID-MAIL" xml:space="preserve">
+    <value>Please type a valid email</value>
+  </data>
+  <data name="REGISTER-ERROR-WEAK-PASSWORD" xml:space="preserve">
+    <value>Please type a better password
+Remember that it has to be 8 characters minimum including letter and numbers</value>
+  </data>
+  <data name="REGISTER-ERROR-DEFAULT" xml:space="preserve">
+    <value>Sorry, An unexpected error that we don't know has ocurred</value>
+  </data>
+  <data name="REGISTER-FIELDS-ERROR" xml:space="preserve">
+    <value>Please, fill all the empty spaces</value>
+  </data>
+  <data name="REGISTER-USER-CREATED" xml:space="preserve">
+    <value>User created successfuly!
+Check your email to verify your account.</value>
+  </data>
+  <data name="LOGIN-MESSAGE-TITLE" xml:space="preserve">
+    <value>Logged In?</value>
+  </data>
+  <data name="LOGIN-MESSAGE" xml:space="preserve">
+    <value>To use this function, First you have to Sign-In in the app</value>
+  </data>
+  <data name="LOGIN-ERROR" xml:space="preserve">
+    <value>Sorry, we failed to log in into your account, please check the email and password fields.</value>
+  </data>
+  <data name="TREE-REPORT-LOCATION-INSTRUCTION-TITLE" xml:space="preserve">
+    <value>Instructions</value>
+  </data>
+  <data name="TREE-REPORT-LOCATION-INSTRUCTION" xml:space="preserve">
+    <value>Tap on the location of the tree, the location will be more accurate if you zoom enough where you took the photo</value>
+  </data>
+  <data name="TREE-REPORT-LOCATION-ERROR" xml:space="preserve">
+    <value>Please select a location</value>
+  </data>
+  <data name="ADMIN-MENU-TITLE" xml:space="preserve">
+    <value>Admin Menu</value>
+  </data>
+  <data name="FILTER-TITLE" xml:space="preserve">
+    <value>Filter Shown Reports</value>
+  </data>
+  <data name="FILTER-TREENAME" xml:space="preserve">
+    <value>Tree Name</value>
+  </data>
+  <data name="FILTER-TREECOLOR" xml:space="preserve">
+    <value>Flowering Color</value>
+  </data>
+  <data name="FILTER-DELETE" xml:space="preserve">
+    <value>Delete Filter</value>
+  </data>
+  <data name="FORGOTTEN-PASSWORD" xml:space="preserve">
+    <value>Forgotten password?</value>
+  </data>
+  <data name="FORGOTTEN-PASSWORD-TAP" xml:space="preserve">
+    <value>Tap Here</value>
+  </data>
+  <data name="FORGOTTEN-PASSWORD-MESSAGE" xml:space="preserve">
+    <value>We're going to send you a email to reset your password</value>
+  </data>
+  <data name="FORGOTTEN-PASSWORD-PLACEHOLDER" xml:space="preserve">
+    <value>Write your email here..</value>
+  </data>
+  <data name="FORGOTTEN-PASSWORD-SEND" xml:space="preserve">
+    <value>Send Verification</value>
+  </data>
+  <data name="NOT-VERIFIED-ERROR" xml:space="preserve">
+    <value>This email isn't verified yet</value>
+  </data>
+  <data name="FILTER-ERROR" xml:space="preserve">
+    <value>You can only use one filter at a time, please remove the one you are currently using</value>
+  </data>
+  <data name="PHOTOLOCATION-ERROR" xml:space="preserve">
+    <value>Sorry
+ But we can't get the tree location, remember to have the camera activated in Privacy&gt; Location&gt; Camera, you can also select it manually with Google Maps</value>
+  </data>
+  <data name="Photo-Selector-TakeePhoto" xml:space="preserve">
+    <value>Take Photo</value>
+  </data>
+  <data name="Photo-Selector-ChoosePhoto" xml:space="preserve">
+    <value>Select Photo</value>
+  </data>
+  <data name="GUEST-LOGIN" xml:space="preserve">
+    <value>Continue as Guest</value>
+  </data>
+  <data name="EMAIL-LOGIN" xml:space="preserve">
+    <value>Sign in with email</value>
+  </data>
+  <data name="SIGN-UP" xml:space="preserve">
+    <value>Sign up</value>
+  </data>
+  <data name="BACK-TO-LOGIN" xml:space="preserve">
+    <value>Back to login</value>
+  </data>
+  <data name="EMAIL-PLACEHOLDER" xml:space="preserve">
+    <value>Enter your email</value>
+  </data>
+  <data name="GOOGLE-BUTTON" xml:space="preserve">
+    <value>Sign in with Google</value>
+  </data>
+  <data name="NEW-EMAIL-PLACEHOLDER" xml:space="preserve">
+    <value>Enter an email</value>
+  </data>
+  <data name="NEW-PASSWORD-PLACEHOLDER" xml:space="preserve">
+    <value>Enter a password</value>
+  </data>
+  <data name="PASSWORD-PLACEHOLDER" xml:space="preserve">
+    <value>Enter your password</value>
+  </data>
+  <data name="SUBMIT" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="USERNAME-PLACEHOLDER" xml:space="preserve">
+    <value>Enter a username</value>
+  </data>
+  <data name="VERIFY-PLACEHOLDER" xml:space="preserve">
+    <value>Verify your password</value>
+  </data>
+  <data name="SETTINGS-TITLE" xml:space="preserve">
+    <value>Versión español</value>
+  </data>
+  <data name="TREE-POPUP-TREENAME" xml:space="preserve">
+    <value>Not yet identified</value>
+  </data>
+  <data name="BUTTON-CLOSE" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="BUTTON-DELETE" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="BUTTON-USE-TREE" xml:space="preserve">
+    <value>Use This Tree</value>
+  </data>
+  <data name="REPORT-DATE-LABEL" xml:space="preserve">
+    <value>Date of Finding</value>
+  </data>
+  <data name="TREE-REPORT-CREATE-BUTTON" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="TREE-REPORT-LOCATION-SEARCH" xml:space="preserve">
+    <value>Enter a Location</value>
+  </data>
+  <data name="TREE-REPORT-PHOTO-UPLOAD" xml:space="preserve">
+    <value>Upload a Photo</value>
+  </data>
+  <data name="TREE-REPORT-SELECT-PROMPT" xml:space="preserve">
+    <value>Select a Location From the Map</value>
+  </data>
+  <data name="ACCOUNT-EMAIL-LABEL" xml:space="preserve">
+    <value>Email: </value>
+  </data>
+  <data name="ACCOUNT-LOGOUT" xml:space="preserve">
+    <value>Log Out</value>
+  </data>
+  <data name="ACCOUNT-USERNAME-LABEL" xml:space="preserve">
+    <value>Username: </value>
+  </data>
+  <data name="ACCOUNT-USERSINCE-LABEL" xml:space="preserve">
+    <value>User since: </value>
+  </data>
+  <data name="EVENTS-TITLE" xml:space="preserve">
+    <value>Events</value>
+  </data>
+</root>

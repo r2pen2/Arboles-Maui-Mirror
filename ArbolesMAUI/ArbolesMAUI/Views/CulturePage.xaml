@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ArbolesMAUI.Views"
+             xmlns:vm="clr-namespace:ArbolesMAUI.ViewModels"
+             xmlns:model="clr-namespace:ArbolesMAUI.Model"
+             xmlns:db="clr-namespace:ArbolesMAUI.DB.ObjectManagers"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:localization="clr-namespace:MauiLocalization.Resources.Localization"
+             x:Class="ArbolesMAUI.Views.CulturePage"
+             x:Name="RootPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <toolkit:InvertedBoolConverter x:Key="InvertedBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <vm:CultureViewModel/>
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout
+        HorizontalOptions="Center"
+        x:Name="root">
+        <Grid x:Name="topBar" HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+        
+            <FlexLayout VerticalOptions="Center"
+                        Direction="Row"
+                        JustifyContent="SpaceBetween"
+                        Grid.Row="0" Grid.Column="0">
+                <Button
+                    x:Name="searchButton"
+                    ImageSource="tab_magnifier.png"
+                    Margin="0,0,0,0"
+                    Scale=".85"
+                    BackgroundColor="#ffffff"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Clicked="OnSearchButtonClicked"/>
+
+                <Entry
+                    x:Name="searchBar"
+                    Scale=".85"
+                    Margin="-35,0,-35,0"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Placeholder="{localization:Translate TREE-REPORT-FIND-TREE-SEARCH-NAME}"
+                    IsVisible="false">
+                    <Entry.Behaviors>
+                        <toolkit:EventToCommandBehavior
+                            EventName="TextChanged"
+                            Command="{Binding SearchForTreesCommand}" 
+                            CommandParameter="{Binding Source={x:Reference searchBar}, Path=Text}"/>
+                    </Entry.Behaviors>
+                </Entry>
+
+                <Button
+                    x:Name="cancelButton"
+                    Margin="0,0,0,0"
+                    Text="X"
+                    FontSize="18"
+                    ScaleX="1.2"
+                    TextColor="Black"
+                    BackgroundColor="#ffffff"
+                    HorizontalOptions="End"
+                    VerticalOptions="Center"
+                    Clicked="OnCancelButtonClicked"
+                    Command="{Binding ClearItemsCommand}"
+                    IsVisible="false"/>
+                
+            </FlexLayout>
+
+            <Label Grid.Row="0" Grid.Column="1"
+                x:Name="titleLabel"
+                Text="Árboles Mágicos"
+                Margin="128,0,128,0"
+                VerticalOptions="Center"
+                FontSize="18"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"/>
+
+            <Button Grid.Row="0" Grid.Column="2"
+                x:Name="colorPicker"
+                Margin="0,0,0,0"
+                Scale=".9"
+                BackgroundColor="#ffffff"
+                ImageSource="tab_palette.png" 
+                HorizontalOptions="End"
+                VerticalOptions="Center"
+                Clicked="OnColorPickerClicked"
+                Command="{Binding ClearItemsCommand}"/>
+        </Grid>
+
+        <CollectionView x:Name="palette"
+            ItemsSource="{Binding TreeColorGroups}"
+                  IsGrouped="true"
+                  Opacity="0"
+                  SelectionMode="Single"
+                  SelectionChanged="OnSelectSpeciesClicked">
+            <CollectionView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Button 
+                            x:Name="colorHeader"
+                            BackgroundColor="{Binding MauiColor}" 
+                            CornerRadius="0"
+                            Clicked="OnColorTapped"
+                            Command="{Binding Source={x:RelativeSource AncestorType={x:Type vm:CultureViewModel}},Path=AddOrRemoveGroupDataCommand}" 
+                        CommandParameter="{Binding .}"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.GroupHeaderTemplate>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Image
+                            Source="{Binding Thumbnail}"
+                            Aspect="AspectFit"/>
+                        <VerticalStackLayout VerticalOptions="End" BackgroundColor="#99000000">
+                            <Label 
+                                Text="{Binding NameAutoTranslation}"
+                                TextColor="White"
+                                Margin="20,0,0,0"
+                                FontSize="20"
+                                Opacity="1"
+                                FontAttributes="Bold"
+                                VerticalOptions="End"
+                                HorizontalOptions="Start"/>
+                            <Label
+                                Text="{Binding ScientificName}"
+                                TextColor="White"
+                                Margin="20,0,0,5"
+                                Opacity="1"
+                                FontAttributes="Italic"
+                                VerticalOptions="End"
+                                HorizontalOptions="Start"/>
+                        </VerticalStackLayout>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+  
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  
+  <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="33" />
+
+  
+	
+	<uses-permission android:name="android.permission.INTERNET" />
+
+	<!-- For targeting v8.3 or greater of the Google Play services SDK -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+	<!-- Required to access the user's location -->
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	
+	<!-- Required to access the user's camera, and read/write to their photo library -->
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.CAMERA" />
+  
+  <application android:allowBackup="true" android:icon="@mipmap/appicon" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true">
+		<meta-data android:name="com.google.android.geo.API_KEY" android:value="API KEY" />
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+	</application>
+
+	<!-- Query intent for Camera Capture -->
+	<queries>
+		<intent>
+			<action android:name="android.media.action.IMAGE_CAPTURE" />
+		</intent>
+		<intent>
+			<action android:name="android.support.customtabs.action.CustomTabsService" />
+		</intent>
+	</queries>
+</manifest>

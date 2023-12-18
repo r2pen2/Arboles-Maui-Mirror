@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:localization="clr-namespace:MauiLocalization.Resources.Localization"
+             x:Class="ArbolesMAUI.Views.UploadPage">
+    <ScrollView WidthRequest="400">
+        <FlexLayout Direction="Column" JustifyContent="SpaceBetween" x:Name="VerticalStack">
+
+            <VerticalStackLayout Spacing="20">
+                <Frame
+                    Padding="0"
+                    Margin="0,20,0,0"
+                    IsClippedToBounds="True"
+                    WidthRequest="202"
+                    HeightRequest="202"
+                    CornerRadius="0"
+                    BorderColor="LightGray"
+                    >
+                    <Image
+                    x:Name="Image_Upload"
+                    Source="image_placeholder.png"
+                    HeightRequest="200"
+                    WidthRequest="200"
+                    HorizontalOptions="Center" 
+                    Opacity=".5"
+                    />
+                </Frame>
+
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                    <Button
+                        Style="{StaticResource buttonSmall}"
+                        Text="{localization:Translate TREE-REPORT-PHOTO-UPLOAD}"
+                        Clicked="TakePhoto_Clicked"
+                        HorizontalOptions="Center" />
+                    <Button
+                        Style="{StaticResource buttonSmall}"
+                        Text="{localization:Translate TREE-REPORT-PHOTO-SELECT}"
+                        Clicked="UploadImage_Clicked"
+                        HorizontalOptions="Center" />
+                </HorizontalStackLayout>
+                <Button
+                    Style="{StaticResource buttonFullWidth}"
+                    x:Name="LocationPicker"
+                    IsVisible="True"
+                    Clicked="LocPickerButton_Clicked"
+                    Text="{localization:Translate TREE-REPORT-SELECT-PROMPT}"
+                    
+                />
+                <Frame Style="{StaticResource entryFrame}" IsVisible="false">
+                    <SearchBar 
+                    x:Name="LocSearchBar" 
+                    Placeholder="Enter location" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextChanged="OnLocTextChanged"
+                    Focused="OnLocSearchFocused"
+                    Unfocused="OnLocSearchUnfocused"/>
+                </Frame>
+
+                
+
+            </VerticalStackLayout>
+            
+            <ListView x:Name="LocSearchResults"
+                  ItemSelected="OnLocItemSelected"
+                  Margin="30,20,30,20"
+                  VerticalScrollBarVisibility="Default"
+                  IsVisible="false"
+                  HeightRequest="200"/>
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="5" Margin="50,0">
+                <Label 
+                    Text="{localization:Translate REPORT-DATE-LABEL}" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+                <DatePicker 
+                x:Name="datePicker"
+                HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="5" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,10">
+                
+                <Button
+                    x:Name="selectSpeciesButton"
+                    Style="{StaticResource buttonSmall}"
+                    Text="{localization:Translate TREE-REPORT-WRITE-NAME-TREE-PLACEHOLDER}"
+                    Margin="0"
+                    Clicked="OnSelectSpeciesClicked"/>
+                <Frame 
+                    BorderColor="#0A1930" 
+                    Padding="0" 
+                    x:Name="speciesColorBlock" 
+                    BackgroundColor="LightGray"
+                    HeightRequest="40"
+                    WidthRequest="40"
+                    >
+                </Frame>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="End" Spacing="5" Margin="50,20,50,20">
+                <Button
+                Text="{localization:Translate TREE-REPORT-CREATE-BUTTON}"
+                Style="{StaticResource buttonSmall}"
+                Clicked="OnCreateButtonClicked"
+                HorizontalOptions="Center" />
+                <Button
+                Text="{localization:Translate CANCEL}"
+                Style="{StaticResource buttonSmall}"
+                Clicked="OnCancelButtonClicked"
+                HorizontalOptions="Center" />
+            </HorizontalStackLayout>
+        </FlexLayout>
+    </ScrollView>
+    
+</ContentPage>

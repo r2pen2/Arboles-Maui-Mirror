@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ArbolesMAUI.Views.TreeInfoPage">
+ <ScrollView>  
+    <VerticalStackLayout>
+        <HorizontalStackLayout>
+            <Button
+                    x:Name="backButton"
+                    Text="Back"
+                    FontSize="14"
+                    TextColor="Black"
+                    Margin="0,0,-90,0"
+                    BackgroundColor="#ffffff"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Clicked="OnBackButtonClicked"/>
+            
+            <Label Grid.Row="0" Grid.Column="1"
+                x:Name="titleLabel"
+                Text="{Binding NameAutoTranslation}"
+                Margin="150,0,65,0"
+                VerticalOptions="Center"
+                FontSize="18"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"/>
+        </HorizontalStackLayout>
+
+        <VerticalStackLayout>
+            <Rectangle
+                Scale="1"
+                VerticalOptions="CenterAndExpand"
+                ScaleY="1"
+                BackgroundColor="LightGray"
+                Margin="20,0,20,0"/>
+            <Label
+                    Text="{Binding ScientificName}"
+                    TextColor="Black"
+                    Margin="10"
+                    Opacity="1"
+                    FontAttributes="Italic"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"/>
+        </VerticalStackLayout>
+        <Grid Padding="0" Margin="10" VerticalOptions="Start">
+            <CarouselView x:Name="carouselView"
+                ItemsSource="{Binding Images}"
+                VerticalOptions="Start">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Image
+                                Source="{Binding ImageUrl}"
+                                VerticalOptions="Start"
+                                Aspect="AspectFill"
+                                HeightRequest="200"/>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView> 
+        </Grid>
+
+        <Label
+            x:Name="treeinfoText"
+            Text="{Binding OriginEN}"
+            Margin="10,0,10,0"
+            FontSize="12"
+            TextColor="Black"
+            />
+
+        <Grid
+            HorizontalOptions="Start"
+            Margin="10,10,10,10"
+            
+            >
+            <VerticalStackLayout
+                >
+                    <HorizontalStackLayout
+                        Spacing="10"
+                        >
+                        <ImageButton
+                            x:Name="TreeHeight"
+                            Clicked="TreeHeight_Clicked"
+                            Source="treeinfo_tree.svg"
+                            BackgroundColor="#c1ca6e"
+                            CornerRadius="30"
+                            HeightRequest="70"
+                            WidthRequest="70"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            Padding="4"
+                            Scale="1"
+                            Opacity="1"
+                            IsVisible="True"
+                            >
+                        </ImageButton>
+                        <Label
+                            x:Name="TreeHeiLabel"
+                            Text="Average Tree Height:"
+                            FontSize="12"
+                            IsVisible="True"
+                            Margin="0,20,0,20"
+                            />
+                        <Label
+                            x:Name="TreeHeiLabelValues"
+                            Text="{Binding SizeMaxHeight, StringFormat='({0})'}"
+                            FontSize="12"
+                            TextColor="Black"
+                            IsVisible="True"
+                            Margin="0,20,0,20"
+                            />
+                    </HorizontalStackLayout>
+                
+                
+                    <HorizontalStackLayout
+                    Spacing="10">
+                        <ImageButton
+                            x:Name="FlowerDimesions"
+                            Clicked="FlowerDimesions_Clicked"
+                            Source="treeinfo_flower.svg"
+                            HeightRequest="70"
+                            WidthRequest="70"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            CornerRadius="30"
+                            Scale="1"
+                            
+                            Padding = "4"
+                            BackgroundColor="#e49f52"
+                            Opacity="1"
+                            IsVisible="True"
+                            >
+                        </ImageButton>
+                        <Label
+                            x:Name="FlowerDimLabel"
+                            Text="Flower Dimensions:"
+                            FontSize="12"
+                            IsVisible="True"
+                            Margin="0,20,0,20"
+                            />
+                        <Label
+                            x:Name="FlowerDimLabelValues"
+                            Text="{Binding SizeBottom}"
+                            FontSize="12"
+                            IsVisible="True"
+                            Margin="0,20,0,20"
+                            />
+                        <Label
+                            Text="{Binding SizeWidth}"
+                            FontSize="12"
+                            IsVisible="True"
+                            Margin="0,20,0,20"
+                            />
+                        <Label
+                            Text="{Binding SizeHeight}"
+                            FontSize="12"
+                            IsVisible="True"
+                            Margin="0,20,0,20"
+                            />
+                    </HorizontalStackLayout>
+                
+                
+                    <HorizontalStackLayout
+                    Spacing="10">
+                        <ImageButton
+                            x:Name="SeedDispersion"
+                            Clicked="SeedDispersion_Clicked"
+                            Source="treeinfo_seeds.svg"
+                            HeightRequest="70"
+                            WidthRequest="70"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            CornerRadius="30"
+                            Padding="4"
+                            Scale="1"
+                            
+                            BackgroundColor="#f8f17f"
+                            Opacity="1"
+                            IsVisible="True"
+                            >
+                        </ImageButton>
+                        <Label
+                            x:Name="SeedDisLabel"
+                            Text="Seed Disperser:"
+                            FontSize="12"
+                            IsVisible="True"
+                            Margin="0,20,0,20"
+                            />
+                        <Label
+                            x:Name="SeedDisLabelValues"
+                            Text="{Binding DispersorEN}"
+                            FontSize="12"
+                            IsVisible="True"
+                            
+                            Margin="0,20,0,20"
+                            />
+                    </HorizontalStackLayout>
+                    
+            </VerticalStackLayout>
+        </Grid>
+            <Grid>
+
+                <HorizontalStackLayout
+                 x:Name="FloweringWeeksList"
+                 HorizontalOptions="Center"
+                 HeightRequest="15"
+                 BackgroundColor="Transparent"
+                 VerticalOptions="End"
+                 Margin="0,0,0,2"
+                 />
+
+                <Image
+                x:Name="Calendar"
+                Source="calendar_english.svg"
+                WidthRequest="389"
+                />
+            </Grid>
+            <ListView
+            x:Name="FloweringWeeks"
+            ItemsSource="{Binding FloweringWeeks}"
+            BackgroundColor="#c1ca6e"
+            Rotation="0"
+            HasUnevenRows="True"
+            IsVisible="False"
+            >
+        </ListView>
+
+        
+
+        <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Margin="8">
+            <Label
+                Text="This tree is presented by:"
+                FontSize="12"
+                Margin="20,20,0,20"
+                HorizontalOptions="Center"
+                >
+            </Label>
+
+            <Image
+                Source="logo_mep.jpg"
+                WidthRequest="60"
+                HorizontalOptions="End"
+                Margin="10,10,10,10"
+
+            />
+        </HorizontalStackLayout>
+
+
+        <Button
+            x:Name="selectButton"
+            Text="Select This Species"
+            Clicked="OnSelectButtonClicked"
+            IsVisible="false"/>
+    </VerticalStackLayout>
+    </ScrollView> 
+</ContentPage>
+

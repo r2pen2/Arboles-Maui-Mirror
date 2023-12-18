@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ArbolesMAUI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ArbolesMAUI"
+    xmlns:views="clr-namespace:ArbolesMAUI.Views"
+    xmlns:material="Microsoft.AspNetCore.Components.WebAssembly.Material"
+
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False">
+
+    <TabBar x:Name="tabBar" CurrentItem="{x:Reference MapPageTab}">
+        <ShellContent
+            x:Name="AboutArbolesMagicosPageTab"
+            ContentTemplate="{DataTemplate views:AboutArbolesMagicosPage}"
+            Icon="tab_arboles_logo.png"
+            Route="AboutArbolesMagicosPage"/>
+
+        <ShellContent
+            x:Name="CulturePageTab"
+            ContentTemplate="{DataTemplate views:CulturePage}"
+            Icon="tab_culture.png"
+            Route="CulturePage"/>
+
+        <ShellContent
+            x:Name="MapPageTab"
+            ContentTemplate="{DataTemplate local:MapPage}"
+            Icon="tab_location.png"
+            Route="MapPage" />
+
+        <ShellContent
+            x:Name="FeedPageTab"
+            ContentTemplate="{DataTemplate views:FeedPage}"
+            Icon="tab_feed.png"
+            Route="FeedPage"/>
+
+        <ShellContent
+            x:Name="AccountPageTab"
+            ContentTemplate="{DataTemplate views:AccountPage}"
+            Icon="tab_user.png"
+            Route="AccountPage" />
+
+    </TabBar>
+
+</Shell>

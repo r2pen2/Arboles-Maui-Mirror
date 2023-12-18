@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               xmlns:localization="clr-namespace:MauiLocalization.Resources.Localization"
+               x:Class="ArbolesMAUI.Views.TreePopup"
+               VerticalOptions="Center"
+               CanBeDismissedByTappingOutsideOfPopup="True">
+
+    <Grid>
+    <VerticalStackLayout Spacing="20" x:Name="root" Padding="30" BackgroundColor="#fefefe">
+        <Label 
+                Text="{Binding FirstContributionDisplayName, StringFormat= '{0}'}" 
+                VerticalOptions="Center" 
+                x:Name="CurrentContributorName"
+                HorizontalOptions="Center"/>
+        <Label 
+                Text="{Binding CreateDateString}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+        
+        <Label x:Name="treeNameLabel"
+                Text="{localization:Translate TREE-POPUP-TREENAME}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+
+
+        <Frame 
+                BorderColor="#0A1930" 
+                Padding="10"  
+                BackgroundColor="{Binding MauiColor}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+            >
+            <Frame IsClippedToBounds="True" HeightRequest="240" WidthRequest="240" CornerRadius="10">
+                <Image
+                WidthRequest="240"
+                HeightRequest="240"
+                x:Name="CurrentImage"
+                Aspect="AspectFill"
+                Source="{Binding FirstContributionPhotoUrl}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+            </Frame>
+        </Frame>
+
+        <HorizontalStackLayout HeightRequest="40" HorizontalOptions="Center" Spacing="50">
+            <Button Text="&lt;" Scale="1" Style="{StaticResource buttonArrow}" Clicked="OnLeftClick" x:Name="LeftButton"/>
+            <Button Text=">" Scale="1" Style="{StaticResource buttonArrow}" Clicked="OnRightClick" x:Name="RightButton"/>
+        </HorizontalStackLayout>
+
+        <Button 
+            Style="{StaticResource buttonSmall}"
+            Text="{localization:Translate BUTTON-CLOSE}" 
+            Clicked="OnCloseButtonClicked" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+        
+        <Button 
+            Style="{StaticResource buttonSmallRed}"
+            Text="{localization:Translate BUTTON-DELETE}" 
+            x:Name="deleteButton"
+            Clicked="OnDeleteClick"
+            IsVisible="False"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+
+        <Button 
+            Style="{StaticResource buttonSmallBlue}"
+            Text="{localization:Translate BUTTON-USE-TREE}" 
+            x:Name="UseThisTreeButton"
+            Clicked="OnUseThisTreeClicked" 
+            VerticalOptions="Center" 
+            IsVisible="false"
+            HorizontalOptions="Center"/>
+
+
+    </VerticalStackLayout>
+
+        <ImageButton
+            x:Name="flagImage"
+            HeightRequest="30"
+            WidthRequest="30"
+            Margin="13.4164079"
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            Clicked="handleFlagClick"
+            />
+    </Grid>
+
+
+</toolkit:Popup>

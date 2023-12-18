@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ArbolesMAUI.MapPage"
+             xmlns:localization="clr-namespace:MauiLocalization.Resources.Localization"
+             xmlns:maps="clr-namespace:Microsoft.Maui.Controls.Maps;assembly=Microsoft.Maui.Controls.Maps"
+             xmlns:sensors="clr-namespace:Microsoft.Maui.Devices.Sensors;assembly=Microsoft.Maui.Essentials"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:views="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             >
+
+
+        <Grid Margin="0">
+
+        <Frame x:Name="mapFrame" Padding="0" Margin="0"/>
+            
+        <VerticalStackLayout>
+            <Frame x:Name="LocSearchBarFrame" 
+                   Style="{StaticResource entryFrame}" 
+                   HeightRequest="50" 
+                   VerticalOptions="Start" 
+                   IsVisible="false"
+                   Opacity="1"
+                   BackgroundColor="LightGray"
+                   >
+
+                    <SearchBar 
+                            x:Name="LocSearchBar" 
+                            Placeholder="{localization:Translate TREE-REPORT-LOCATION-SEARCH}" 
+                            PlaceholderColor="Black"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            TextChanged="OnLocTextChanged"
+                            Focused="OnLocSearchFocused"
+                            Unfocused="OnLocSearchUnfocused"
+                            
+                    />
+            
+            </Frame>
+            <Frame 
+                x:Name="SearchResultsFrame"
+                   VerticalOptions="StartAndExpand" 
+                   Opacity="1"
+                    IsVisible="false"
+                   BackgroundColor="LightGray"
+                   BorderColor="Transparent" Padding="0"
+                    
+                   >
+        
+                    <ListView x:Name="LocSearchResults"
+                          ItemSelected="OnLocItemSelected"
+                          VerticalScrollBarVisibility="Default"
+                          IsVisible="true"
+                    />
+             </Frame>
+        </VerticalStackLayout>
+
+        <views:Expander 
+            x:Name="MapExpander"
+            HorizontalOptions="Start"
+				     VerticalOptions="End"
+				     Direction="Up"
+                     Margin="10,40">
+
+            <views:Expander.Header>
+                <ImageButton
+                    Clicked="OnExpandClicked"
+                    x:Name="ExpandButton"
+		            CornerRadius="10"
+		            HorizontalOptions="End"
+		            VerticalOptions="End"
+                    Source="angle_down_solid.svg"
+                    HeightRequest="60"
+                    WidthRequest="60"
+                    Padding="9"
+                    Margin="0,10,0,0"
+                    BackgroundColor="#ffffff"
+                    Opacity=".85">
+
+                </ImageButton>
+            </views:Expander.Header>
+
+            <views:Expander.Content>
+                <VerticalStackLayout Spacing="10"
+                        WidthRequest="50"
+                        x:Name="MapMenu"
+                        >
+
+                    <ImageButton
+                        x:Name="FilterButton"
+			            Clicked="OnFilterClicked"
+            			HorizontalOptions="End"
+                        Source="filter.svg"
+                        HeightRequest="50"
+                        CornerRadius="10"
+                        BackgroundColor="#ffffff"
+                        Opacity=".85"
+                        Padding="9"
+                        Scale="1.2">
+                    </ImageButton>
+
+                    <ImageButton
+                        x:Name="SearchButton"
+    		    	    Clicked="OnSearchClicked"
+	        	    	HorizontalOptions="End"
+                        Source="search.svg"
+                        HeightRequest="50"
+                        CornerRadius="10"
+                        BackgroundColor="#ffffff"
+                        Opacity=".85"
+                        Padding="9"
+                        Scale="1.2">
+                    </ImageButton>
+
+                    <ImageButton
+                        x:Name="CenterButton"
+    		    	    Clicked="OnCenterClicked"
+	        	    	HorizontalOptions="End"
+                        Source="crosshair.svg"
+                        HeightRequest="50"
+                        CornerRadius="10"
+                        BackgroundColor="#ffffff"
+                        Opacity=".85"
+                        Padding="9"
+                        Scale="1.2">
+                    </ImageButton>
+
+                </VerticalStackLayout>
+            </views:Expander.Content>
+        </views:Expander>
+
+
+        <ImageButton
+                    Clicked="OnCameraClicked"
+                    x:Name="CameraButton"
+		            CornerRadius="10"
+		            HorizontalOptions="End"
+		            VerticalOptions="End"
+                    Margin="10,40"
+                    Padding="8"
+                    Source="camera.svg"
+                    HeightRequest="60"
+                    WidthRequest="60"
+                    BackgroundColor="#ffffff"
+                    Opacity=".85"
+
+                    IsVisible="True"
+                    IsEnabled="True"
+
+                    >
+        </ImageButton>
+
+        <Image
+            x:Name="CrossHairs" Source="plus.png" Scale="01" Opacity="1" InputTransparent="True"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            HeightRequest="30"
+            IsVisible="false"
+            />
+
+
+    </Grid>
+
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="LightSlateGray" StatusBarStyle="Default" />
+    </ContentPage.Behaviors>
+
+</ContentPage>

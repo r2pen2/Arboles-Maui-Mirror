@@ -1,0 +1,16 @@
+.ArbolesMAUI/ArbolesMAUI/obj/
+.ArbolesMAUI/ArbolesMAUI/bin/
+.ArbolesMAUI/ArbolesMAUI/ArbolesMAUI.csproj.user
+.ArbolesMAUI/.vs/
+.vs/
+.DS_Store
+ArbolesMAUI/ArbolesMAUI/bin/
+ArbolesMAUI/ArbolesMAUI/obj/
+ArbolesMAUI/ArbolesMAUI/ArbolesMAUI.csproj.user
+ArbolesMAUI/ArbolesMAUI/bin/Debug/net7.0-android/ArbolesMAUI.dll
+ArbolesMAUI/ArbolesMAUI/bin/Debug/net7.0-android/ArbolesMAUI.pdb
+ArbolesMAUI/ArbolesMAUI/bin/Debug/net7.0-android/ArbolesMAUI.pdb
+ArbolesMAUI/ArbolesMAUI/bin/Debug/net7.0-android/com.companyname.arbolesmaui-Signed.apk
+ArbolesMAUI/ArbolesMAUI/bin/Debug/net7.0-android/com.companyname.arbolesmaui.apk
+Admin/arboles-admin/node_modules/
+Admin/node_modules/

@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:localization="clr-namespace:MauiLocalization.Resources.Localization"
+             x:Class="ArbolesMAUI.Views.AccountPage"
+             Title="AccountPage">
+    <FlexLayout Direction="Column" JustifyContent="SpaceBetween" AlignContent="Center" Margin="0,20,0,20" x:Name="accountDetailsLayout">
+
+        <Image 
+            x:Name="arbolesLogo"
+            Source="arboles_logo_name.png"
+            VerticalOptions="CenterAndExpand"
+            Margin="30,-20,30,-88"
+            />
+
+        <VerticalStackLayout Spacing="10" x:Name="accountDetailsFrame">
+
+            <Label
+                x:Name="usernameLabel"
+                Text=""
+                FontSize="15"
+                HorizontalOptions="Center" 
+            />
+
+            <Label
+                x:Name="emailLabel"
+                Text=""
+                FontSize="15"
+                HorizontalOptions="Center" 
+            />
+
+            <Label
+                x:Name="userSinceLabel"
+                Text="User since:"
+                HorizontalOptions="Center"
+            />
+
+        </VerticalStackLayout>
+
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
+            Spacing="20"
+            
+            >
+            <Button
+                x:Name="accountSettingsButton"
+                Style="{StaticResource buttonSmall}"
+                Text="{localization:Translate SETTINGS-TITLE}"
+                Clicked="changeLanguageButtonClicked"
+            />
+            <Button
+                Style="{StaticResource buttonSmallRed}"
+                Text="{localization:Translate ACCOUNT-LOGOUT}"
+                x:Name="LogOutButton"
+                Clicked="SignOutUser"
+            />
+        </HorizontalStackLayout>
+
+        <VerticalStackLayout
+            x:Name="loginForm"
+            Spacing="10"
+            VerticalOptions="Start">
+            <Frame
+                Style="{StaticResource entryFrame}">
+                <Entry x:Name="loginEmail"
+                    Placeholder="{localization:Translate EMAIL-PLACEHOLDER}"
+                    TextChanged="OnEmailEntryChanged"
+                    Completed="OnEmailEntryCompleted" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" 
+                />
+            </Frame>
+
+            <Frame
+                Style="{StaticResource entryFrame}">
+                <Entry 
+                    x:Name="loginPassword"
+                    IsPassword="True"
+                    Placeholder="{localization:Translate PASSWORD-PLACEHOLDER}"
+                    TextChanged="OnPasswordEntryChanged"
+                    Completed="OnPasswordEntryCompleted" 
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                />
+            </Frame>
+
+            <Button
+                x:Name="LoginButton"
+                Text="{localization:Translate LOGIN-BUTTON}"
+                Style="{StaticResource buttonFullWidth}"
+                Clicked="OnLoginClicked"
+                IsEnabled="False"
+            />
+
+            <Label
+                x:Name="LoginErrorLabel"
+                Text="{localization:Translate LOGIN-ERROR}"
+                TextColor="Red"
+                HorizontalOptions="Center"
+                IsVisible="False"
+            />
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="30" Scale="0.8" BackgroundColor="Transparent">
+                <Button
+                Text="{localization:Translate SIGN-UP}"
+                Style="{StaticResource buttonSmall}"
+                Clicked="OnSignupButtonClicked"
+                />
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+
+        <VerticalStackLayout Spacing="5" x:Name="signUpForm" IsVisible="False" VerticalOptions="Start">
+            <Frame Style="{StaticResource entryFrame}">
+                <Entry x:Name="usernameEntry"
+                Placeholder="{localization:Translate USERNAME-PLACEHOLDER}"
+                TextChanged="OnUsernameEntryChanged"
+                Completed="OnUsernameEntryCompleted" 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            </Frame>
+
+            <Frame Style="{StaticResource entryFrame}">
+                <Entry x:Name="emailEntry"
+                Placeholder="{localization:Translate NEW-EMAIL-PLACEHOLDER}"
+                TextChanged="OnEmailEntryChanged"
+                Completed="OnEmailEntryCompleted" 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            </Frame>
+
+            <Frame Style="{StaticResource entryFrame}">
+                <Entry x:Name="passwordEntry"
+                Placeholder="{localization:Translate NEW-PASSWORD-PLACEHOLDER}"
+                IsPassword="True"
+                TextChanged="OnPasswordEntryChanged"
+                Completed="OnPasswordEntryCompleted" 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            </Frame>
+
+            <Frame Style="{StaticResource entryFrame}">
+                <Entry x:Name="verifyEntry"
+                Placeholder="{localization:Translate VERIFY-PLACEHOLDER}"
+                IsPassword="True"
+                TextChanged="OnVerifyEntryChanged"
+                Completed="OnVerifyEntryCompleted" 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            </Frame>
+
+            <Button
+            x:Name="SubmitButton"
+            Style="{StaticResource buttonFullWidth}"
+            Text="{localization:Translate SUBMIT}"
+            HorizontalOptions="Center"
+            Clicked="OnSubmitClicked"
+            IsEnabled="False"
+            />
+
+
+
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand">
+                <Button
+                Text="{localization:Translate BACK-TO-LOGIN}"
+                Style="{StaticResource buttonSmall}"
+                Scale="0.75"
+                VerticalOptions="CenterAndExpand"
+                Clicked="OnBackButtonClicked"
+            />
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+
+    </FlexLayout>
+</ContentPage>
